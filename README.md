@@ -1,4 +1,4 @@
-## My 'Cracking the Coding Interview' Solutions written in JavaScript  
+## My 'Cracking the Coding Interview' 6th Edition Solutions written in JavaScript  
 ![](BigO/ds_operations_bigO.jpg)  
 ![](BigO/array_sorting_bigO.jpg)  
 
