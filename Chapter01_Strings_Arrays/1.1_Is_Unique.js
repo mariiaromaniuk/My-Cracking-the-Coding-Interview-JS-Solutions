@@ -35,4 +35,5 @@ function isUnique(str) {
   return true;
 }
 
+// Tests
 console.log(isUnique('abertyuifm'));
