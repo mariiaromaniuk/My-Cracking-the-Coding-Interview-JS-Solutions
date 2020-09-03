@@ -1,4 +1,9 @@
-## My 'Cracking the Coding Interview' 6th Edition Solutions written in JavaScript  
+## My 'Cracking the Coding Interview' Solutions written in JavaScript  
+
+- This repository contains my own JavaScript solutions on questions listed in the book [Cracking the Coding Interview](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850) by Gayle Laakmann McDowell.
+
+- Under each JavaScript file, there are tests to check that the code is working as expected. For convenience, simple logging is used to test the functions. To run the tests, just cd into the folder containing the .js file and run `node <fileName>.js` to run the tests.
+
 ![](BigO/ds_operations_bigO.jpg)  
 ![](BigO/array_sorting_bigO.jpg)  
 
