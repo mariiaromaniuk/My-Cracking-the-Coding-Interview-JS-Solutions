@@ -24,9 +24,9 @@ function oneAway(str1, str2){
   if (Math.abs(str1.length - str2.length) > 1) 
     return false;
   else if (str1.length - str2.length === 1) 
-    len = str1.length-1;
+    len = str1.length - 1;
   else if (str2.length - str1.length === 1) 
-    len = st2.length-1;
+    len = st2.length - 1;
   else if (str1.length === str2.length) {
     len = str1.length;
     count = 2;
