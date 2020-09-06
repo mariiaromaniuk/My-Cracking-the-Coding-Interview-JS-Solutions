@@ -2,7 +2,7 @@
 // If the "compressed" string would not become smaller than the original string, your method should 
 // return the original string. You can assume the string has only uppercase and lowercase letters (a-z).
 
-// Time: O(n^2), Space: O(n)
+// Time: O(n) -> nested loops, but we traverse an array just once, Space: O(n)
 function stringCompression(str){
   let newStr = '';
   for (let i = 0, count = 1; i < str.length; i += count){
