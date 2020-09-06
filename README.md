@@ -1,4 +1,4 @@
-## My 'Cracking the Coding Interview' Solutions written in JavaScript  
+## My Solutions for 'Cracking the Coding Interview' written in JavaScript  
 
 - This repository contains my JavaScript solutions on questions listed in the book [Cracking the Coding Interview](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850) by Gayle Laakmann McDowell.
 
