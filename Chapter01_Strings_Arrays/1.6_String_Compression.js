@@ -4,6 +4,9 @@
 
 // Time: O(n) -> nested loops, but we traverse an array just once, Space: O(n)
 function stringCompression(str){
+  if (str.length <= 2) 
+    return str;
+  
   let newStr = '';
   for (let i = 0, count = 1; i < str.length; i += count){
     count = 1;
