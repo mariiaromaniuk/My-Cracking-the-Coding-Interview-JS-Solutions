@@ -14,9 +14,31 @@ function stringCompression(str){
       if (str[i] === str[j]) count++;
       else break;
     }
-    newStr += str[i];
-    newStr += count;
+    newStr += str[i] + count;
   }
+  return newStr.length < str.length ? newStr : str;
+}
+
+// Time: O(n), Space: O(n)
+function stringCompression(str) {
+  if (str.length <= 2) 
+    return str;
+
+  let charMap = new Map();
+  let newStr = '', currChar = str[0];
+
+  for (const char of str) {
+    if (char === currChar) {
+      charMap.set(char, charMap.get(char) + 1 || 1);
+    } else {
+      newStr += currChar + charMap.get(currChar);
+      charMap.clear();
+      currChar = char;
+      charMap.set(char, 1);
+    }
+  }
+
+  newStr += [...charMap][0].join``;
   return newStr.length < str.length ? newStr : str;
 }
 
