@@ -1,4 +1,3 @@
-//A Binary Search Tree (BST)
 // Binary Search Tree utility class
 
 class Node{
@@ -44,6 +43,21 @@ class BinarySearchTree{
   }
 }
 
+function validate(head){ 
+  if (!head)  
+    return true;  
+  if (head.left && head.left.val > head.val)  
+    return false;  
+  if (head.right && head.right.val < head.val)  
+    return false;  
+  if (!validate(head.left) || !validate(head.right))  
+    return false;   
+  return true;  
+}
+
+module.exports = BinarySearchTree;
+
+// Test
 const bst = new BinarySearchTree();
 console.log(bst);
 bst.insert(10);
