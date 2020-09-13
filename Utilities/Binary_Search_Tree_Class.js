@@ -39,8 +39,47 @@ class BinarySearchTree{
   }
 
   // Remove specific value from the tree
-  remove(val) {
-  }
+  remove(val){ 
+    // root is re-initialized with a root of a modified tree. 
+    this.root = this.removeNode(this.root, val); 
+  } 
+  // Method to remove node with a given value
+  // it recur over the tree to find the val and removes it 
+  removeNode(node, key){ 
+    if (node === null) 
+        return null; 
+    else if (key < node.val){ 
+      node.left = this.removeNode(node.left, key); 
+      return node; 
+    } 
+    else if (key > node.val){ 
+      node.right = this.removeNode(node.right, key); 
+      return node; 
+    } 
+    else { 
+      // deleting node with no children 
+      if (node.left === null && node.right === null){ 
+          node = null; 
+          return node; 
+      } 
+      // deleting node with one child 
+      if (node.left === null){ 
+          node = node.right; 
+          return node; 
+      } 
+      else if (node.right === null){ 
+          node = node.left; 
+          return node; 
+      } 
+      // Deleting node with two children 
+      // minumum node of the rigt subtree is stored in aux 
+      var aux = this.findMinNode(node.right); 
+      node.val = aux.val; 
+  
+      node.right = this.removeNode(node.right, aux.val); 
+      return node; 
+    } 
+  } 
 }
 
 function validate(head){ 
@@ -66,5 +105,7 @@ bst.insert(15);
 bst.insert(12);
 bst.insert(7);
 bst.insert(6);
+console.log(validate(bst));
 console.log(bst);
-console.log(bst.remove(7));
+console.log(bst.remove(10));
+console.log(bst);
