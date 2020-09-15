@@ -1,5 +1,7 @@
 // Write code to remove duplicates from an unsorted linked list.
 
+const LinkedList = require("../Utilities/Linked_List_Class.js");
+
 // Time: O(n), Space: O(n)
 function removeDuplicates(list){
   if (!list.head || !list.head.next)
