@@ -1,3 +1,5 @@
+const LinkedList = require("../Utilities/Linked_List_Class.js");
+
 function sumLinkedLists(node1, node2, carry=0){
   if(!node1 && !node2 && carry===0){
     return null
