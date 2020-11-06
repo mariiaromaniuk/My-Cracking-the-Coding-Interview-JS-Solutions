@@ -16,13 +16,13 @@ class BinarySearchTree{
   // Insert specific value to the tree
   insert(val) {
     const node = new Node(val);
-    if (!this.head){
-      this.head = node;
-      this.head.left = null;
-      this.head.right = null;
+    if (!this.root){
+      this.root = node;
+      this.root.left = null;
+      this.root.right = null;
     }
     else {
-      let p = this.head;
+      let p = this.root;
       if (val < p.val){
         while (val < p.val && p.left)
           p = p.left;
