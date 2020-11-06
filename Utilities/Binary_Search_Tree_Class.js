@@ -18,18 +18,20 @@ class BinarySearchTree{
     const node = new Node(val);
     if (!this.root){
       this.root = node;
-      this.root.left = null;
-      this.root.right = null;
+      return this;
     }
     else {
       let p = this.root;
-      if (val < p.val){
+      if (val === p.val){
+        return undefined;
+      } 
+      else if (val < p.val){
         while (val < p.val && p.left)
           p = p.left;
         node.left = p.left;
         p.left = node;
-      }
-      else if (val > p.val){
+      } 
+      else {
         while (val > p.val && p.right)
           p = p.right;
         node.right = p.right;
